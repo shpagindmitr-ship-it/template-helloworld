@@ -2,6 +2,7 @@ import { Composition, Folder } from "remotion";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
+import { TITLE_TEXT } from "./config";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -43,11 +44,11 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1920}
         height={1080}
-        // You can override these props for each render:
+        // Своё значение можно переопределить при рендере:
         // https://www.remotion.dev/docs/parametrized-rendering
         defaultProps={{
-          titleText: "Welcome to Remotion",
-          titleColor: "#000000",
+          titleText: TITLE_TEXT,
+          titleColor: "#ffffff",
         }}
       />
 
